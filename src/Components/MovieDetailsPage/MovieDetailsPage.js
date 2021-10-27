@@ -2,13 +2,19 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Link, Route, useRouteMatch, Switch } from "react-router-dom";
 import React from "react";
+import { lazy, Suspense } from "react";
 import {
   fetchMovieDetails,
   fetchReviews,
   fetchCast,
 } from "../../services/film-api";
-import Cast from "../Cast/Cast";
-import Reviews from "../Reviews/Reviews";
+
+// import Cast from "../Cast/Cast";
+// import Reviews from "../Reviews/Reviews";
+const Cast = lazy(() => import("../Cast/Cast" /* webpackChunkName: "cast" */));
+const Reviews = lazy(() =>
+  import("../Reviews/Reviews" /* webpackChunkName: "cast" */)
+);
 const base_url = "https://image.tmdb.org/t/p/w500";
 export default function MovieDetailsPage() {
   const { url, path } = useRouteMatch();
@@ -74,14 +80,16 @@ export default function MovieDetailsPage() {
               </li>
             </ul>
           </div>
-          <Switch>
-            <Route path={`${path}/credits`}>
-              <Cast cast={cast} />
-            </Route>
-            <Route path={`${path}/reviews`}>
-              <Reviews reviews={reviews} />
-            </Route>
-          </Switch>
+          <Suspense fallback={<div>Loading details...</div>}>
+            <Switch>
+              <Route path={`${path}/credits`}>
+                <Cast cast={cast} />
+              </Route>
+              <Route path={`${path}/reviews`}>
+                <Reviews reviews={reviews} />
+              </Route>
+            </Switch>
+          </Suspense>
         </div>
       )}
     </div>
