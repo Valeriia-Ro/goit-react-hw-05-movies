@@ -1,0 +1,1 @@
+{"version":3,"sources":["title.js"],"names":["Title"],"mappings":"yIAAA,+DAEe,SAASA,IACtB,OACE,8BACE","file":"static/js/9.37cb4cb7.chunk.js","sourcesContent":["import React from \"react\";\r\n\r\nexport default function Title() {\r\n  return (\r\n    <div>\r\n      <h1>Tranding today</h1>\r\n    </div>\r\n  );\r\n}\r\n"],"sourceRoot":""}

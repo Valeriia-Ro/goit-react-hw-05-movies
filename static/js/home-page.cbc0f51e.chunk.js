@@ -1,0 +1,2 @@
+(this["webpackJsonpgoit-react-hw-05-movies"]=this["webpackJsonpgoit-react-hw-05-movies"]||[]).push([[3],{36:function(t,e,n){"use strict";n.r(e),n.d(e,"default",(function(){return i}));var c=n(29),u=n(0),r=n(30),s=n(33),a=n(1);function i(){var t=Object(u.useState)(null),e=Object(c.a)(t,2),n=e[0],i=e[1];return Object(u.useEffect)((function(){Object(r.e)().then((function(t){var e=t.results;return i(e)}))}),[i]),Object(a.jsx)(s.a,{data:n})}}}]);
+//# sourceMappingURL=home-page.cbc0f51e.chunk.js.map

@@ -1,0 +1,1 @@
+{"version":3,"sources":["notFoud.js"],"names":["NotFound"],"mappings":"yIAAA,+DAEe,SAASA,IACtB,OAAO","file":"static/js/8.96dddc6e.chunk.js","sourcesContent":["import React from \"react\";\r\n\r\nexport default function NotFound() {\r\n  return <h1> error 404: Page was not found </h1>;\r\n}\r\n"],"sourceRoot":""}
